@@ -13,11 +13,12 @@ A Marp deck for presenting **Swipytics: Leveraging the Short-form Video Stream M
 
 ```bash
 pnpm install
+pnpm dev          # dev server with hot reload at http://localhost:8080/main.md
 pnpm build:html   # dist/index.html
 pnpm build:pdf    # dist/swipytics-slide.pdf
 pnpm build        # both
-pnpm preview      # watch mode
-pnpm server       # serve cwd at http://localhost:8080/main.md
+pnpm preview      # rebuild dist/index.html on change
+pnpm server       # same server as pnpm dev
 ```
 
 `--allow-local-files` is required because the deck references local figures in `assets/`.
