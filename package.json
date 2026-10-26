@@ -1,0 +1,16 @@
+{
+  "name": "swipytics-slide",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.21.0",
+  "scripts": {
+    "build:html": "marp main.md --theme themes/swipytics.css --html --allow-local-files -o dist/index.html",
+    "build:pdf": "marp main.md --theme themes/swipytics.css --pdf --allow-local-files -o dist/swipytics-slide.pdf",
+    "build": "pnpm build:html && pnpm build:pdf",
+    "preview": "marp main.md --theme themes/swipytics.css --html --allow-local-files -w -o dist/index.html",
+    "server": "marp -s . --theme themes/swipytics.css --allow-local-files"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}
