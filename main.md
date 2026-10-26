@@ -4,18 +4,27 @@ theme: swipytics
 paginate: true
 size: 16:9
 title: Swipytics
-paginate: true
-size: 16:9
 footer: Swipytics · Short-form Video Stream Metaphor for EDA
 ---
 
 <!-- _class: title -->
+
+<div class="logo-strip">
+<img class="logo-vis" src="assets/ieeevis.svg" alt="IEEE VIS">
+</div>
 
 ## IEEE VIS / TVCG
 
 # Swipytics: Leveraging the Short-form Video Stream Metaphor in Exploratory Data Analysis
 
 Jiwon Choi · Sehi L'Yi · Seojin Kim · Jaemin Jo
+
+<div class="logo-row">
+<img src="assets/matchgroup.svg" alt="Match Group AI">
+<img src="assets/hkust.svg" alt="HKUST">
+<img src="assets/ncsu.svg" alt="North Carolina State University">
+<img src="assets/skku.svg" alt="Sungkyunkwan University">
+</div>
 
 ---
 
@@ -121,7 +130,7 @@ The system computes relationships with prior history to recommend a single next 
 # Three Tabs, Three Interactions
 
 <figure>
-<img class="figure-wide" src="assets/fig1-swipytics-ui.png" alt="The three tabs and three exploration interactions in Swipytics">
+<img class="figure-wide" src="assets/fig-teaser.png" alt="The three tabs and three exploration interactions in Swipytics">
 </figure>
 
 <span class="source-note">Figure 1 — Charts Tab, Search Tab, and Likes Tab</span>
@@ -251,7 +260,7 @@ The system computes relationships with prior history to recommend a single next 
 # Exploration Patterns Were Heterogeneous
 
 <figure>
-<img class="figure-fit" src="assets/fig2-exploration-patterns.png" alt="User interaction and exploration patterns during the exploration phase">
+<img class="figure-fit" src="assets/fig-charts-sequence.png" alt="User interaction and exploration patterns during the exploration phase">
 </figure>
 
 - **Swipe-then-search** was common — discovery, then targeted follow-up

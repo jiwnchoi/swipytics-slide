@@ -628,6 +628,41 @@ section.contents li > ol {
   object-fit: contain;
 }
 
+/* ---------- Logos ---------- */
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.logo-row img {
+  height: 30px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: grayscale(1);
+}
+
+.logo-row img:nth-child(3) {
+  height: 24px;
+}
+
+.logo-strip {
+  position: absolute;
+  top: 52px;
+  right: 78px;
+}
+
+.logo-strip img {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+}
+
 .figure-fit {
   max-height: 340px;
   object-fit: contain;
