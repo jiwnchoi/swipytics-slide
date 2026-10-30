@@ -3,7 +3,7 @@
  */
 
 @import "default";
-@import url("https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap");
 
 :root {
@@ -36,25 +36,21 @@ section {
     linear-gradient(var(--sw-line), var(--sw-line)) 62px calc(100% - 68px) / calc(100% - 124px) 1px no-repeat,
     var(--sw-page);
   color: var(--sw-text);
-  font-family: "Paperlogy", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: "Open Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   font-size: 23px;
   font-weight: 400;
   line-height: 1.45;
-  letter-spacing: -0.005em;
 }
 
 section::before {
-  content: "Swipytics";
+  view-transition-name: vis-logo;
+  content: "";
   position: absolute;
   top: 34px;
-  left: 62px;
-  width: 1156px;
-  color: var(--sw-muted);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  line-height: 1.1;
-  text-transform: uppercase;
+  right: 62px;
+  width: 100px;
+  height: 36px;
+  background: url("../assets/vis2026logo.svg") right center / contain no-repeat;
 }
 
 section::after {
@@ -67,7 +63,7 @@ section::after {
   padding: 0;
   color: var(--sw-muted);
   background: transparent;
-  font-family: "Paperlogy", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
@@ -77,7 +73,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Paperlogy", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: "Open Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
 }
 
 h1 {
@@ -85,7 +81,6 @@ h1 {
   color: var(--sw-heading);
   font-size: 34px;
   font-weight: 700;
-  letter-spacing: -0.02em;
   line-height: 1.14;
 }
 
@@ -112,7 +107,6 @@ h2 {
   color: var(--sw-heading);
   font-size: 22px;
   font-weight: 600;
-  letter-spacing: -0.01em;
   line-height: 1.25;
 }
 
@@ -212,6 +206,7 @@ li > ol li {
 }
 
 section footer {
+  view-transition-name: slide-footer;
   position: absolute;
   top: auto;
   left: 62px;
@@ -221,7 +216,7 @@ section footer {
   margin: 0;
   padding: 0;
   color: var(--sw-muted);
-  font-family: "Paperlogy", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 28px;
@@ -304,45 +299,28 @@ section.title {
   background:
     radial-gradient(ellipse 70% 55% at 88% 10%, var(--sw-primary-soft), transparent 62%),
     linear-gradient(180deg, var(--sw-page), #fbf9f7);
-  border-top: 6px solid var(--sw-primary);
 }
 
 section.title::before {
-  content: "SWIPYTICS";
-  position: absolute;
-  left: 78px;
-  top: 58px;
-  width: auto;
-  color: var(--sw-muted);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  content: none;
+  view-transition-name: none;
 }
 
-section.title h2 {
-  position: static;
-  align-self: flex-start;
-  margin: 0 0 18px;
-  padding: 5px 14px;
-  border-radius: 999px;
-  background: var(--sw-primary-soft);
-  color: var(--sw-primary);
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  line-height: 1.35;
-  text-transform: uppercase;
+section.title .logo-vis {
+  view-transition-name: vis-logo;
 }
 
 section.title h1 {
-  max-width: 900px;
+  max-width: 1124px;
   margin: 0;
   color: var(--sw-heading);
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 700;
-  letter-spacing: -0.035em;
   line-height: 1.16;
+}
+
+section.title .title-highlight {
+  color: var(--sw-primary);
 }
 
 section.title h1::after {
@@ -381,20 +359,6 @@ section.section {
   text-align: center;
 }
 
-section.section::before {
-  content: "SWIPYTICS";
-  display: block !important;
-  position: absolute;
-  top: 34px;
-  left: 62px;
-  width: auto;
-  color: var(--sw-muted);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
 section.section::after {
   display: none !important;
 }
@@ -404,7 +368,6 @@ section.section h1 {
   color: var(--sw-heading);
   font-size: 46px;
   font-weight: 700;
-  letter-spacing: -0.03em;
 }
 
 section.section h1::after {
@@ -443,7 +406,6 @@ section.thanks h1 {
   color: var(--sw-heading);
   font-size: 52px;
   font-weight: 700;
-  letter-spacing: -0.03em;
 }
 
 section.thanks h1::after {
@@ -570,10 +532,9 @@ section.contents li > ol {
   display: block;
   margin-bottom: 4px;
   color: var(--sw-primary);
-  font-family: "Paperlogy", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 38px;
   font-weight: 700;
-  letter-spacing: -0.03em;
   line-height: 1.05;
 }
 
@@ -630,26 +591,38 @@ section.contents li > ol {
 
 /* ---------- Logos ---------- */
 
-.logo-row {
-  display: flex;
-  align-items: center;
-  gap: 34px;
-  width: 100%;
-  margin-top: 4px;
+.author-row {
+  display: grid;
+  grid-template-columns: repeat(4, 140px);
+  gap: 12px;
+  width: max-content;
+  margin-top: 90px;
 }
 
-.logo-row img {
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  min-width: 0;
+  color: var(--sw-muted);
+  font-size: 19px;
+}
+
+.author .presenter {
+  font-weight: 600;
+}
+
+.author img {
   height: 30px;
   width: auto;
-  max-width: 200px;
+  max-width: 140px;
   object-fit: contain;
+  object-position: center;
   opacity: 0.9;
-  filter: grayscale(1);
 }
 
-.logo-row img:nth-child(3) {
-  height: 24px;
-}
 
 .logo-strip {
   position: absolute;
@@ -675,4 +648,143 @@ section.contents li > ol {
   color: var(--sw-muted);
   font-size: 12px;
   font-style: italic;
+}
+
+/* ---------- Familiar metaphor ---------- */
+section.metaphor {
+  justify-content: center;
+  gap: 20px;
+}
+
+.metaphor-comparison {
+  display: grid;
+  grid-template-columns: 1fr 100px 1fr;
+  gap: 20px;
+  width: 1000px;
+  align-self: center;
+}
+
+.metaphor-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.platform-icons, .metaphor-brand {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+}
+
+.platform-icons img {
+  width: auto;
+  height: 29px;
+  max-width: 115px;
+  object-fit: contain;
+}
+
+.metaphor-transfer {
+  align-self: center;
+  height: 8px;
+  margin: 0 14px;
+  background: var(--sw-primary);
+  position: relative;
+}
+
+.metaphor-transfer::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: -10px;
+  width: 22px;
+  height: 22px;
+  border-top: 8px solid var(--sw-primary);
+  border-right: 8px solid var(--sw-primary);
+  transform: rotate(45deg);
+}
+
+.metaphor-brand {
+  color: var(--sw-primary);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.metaphor-phone {
+  width: 220px;
+  height: 355px;
+  padding: 9px;
+  border: 3px solid #292524;
+  border-radius: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.video-scene, .chart-screen {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-scene {
+  background: linear-gradient(160deg, #edd6be, #d8886c 60%, #8b665c);
+}
+
+.video-sun {
+  position: absolute;
+  top: 30px;
+  left: 28px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff1ce;
+}
+
+.video-hill {
+  position: absolute;
+  bottom: -50px;
+  left: -40px;
+  width: 240px;
+  height: 145px;
+  border-radius: 50%;
+  background: #735955;
+}
+
+.video-play {
+  position: absolute;
+  top: 42%;
+  left: 43%;
+  color: white;
+  font-size: 28px;
+}
+
+.chart-screen {
+  background: url("../assets/fig-teaser.png") left center / 300% 100% no-repeat;
+}
+
+.phone-caption {
+  padding: 8px 0 2px;
+  color: var(--sw-text);
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.metaphor-label {
+  color: var(--sw-muted);
+  font-size: 16px;
+}
+
+.metaphor-takeaway {
+  align-self: center;
+  color: var(--sw-heading);
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
 }

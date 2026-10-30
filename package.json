@@ -7,6 +7,7 @@
     "build:html": "marp main.md --theme themes/swipytics.css --html --allow-local-files -o dist/index.html",
     "build:pdf": "marp main.md --theme themes/swipytics.css --pdf --allow-local-files -o dist/swipytics-slide.pdf",
     "build": "pnpm build:html && pnpm build:pdf",
+    "render:slide": "node scripts/render-slide.cjs",
     "dev": "marp -s . --theme themes/swipytics.css --allow-local-files",
     "preview": "marp main.md --theme themes/swipytics.css --html --allow-local-files -w -o dist/index.html",
     "server": "marp -s . --theme themes/swipytics.css --allow-local-files"
