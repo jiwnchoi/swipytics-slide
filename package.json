@@ -8,11 +8,16 @@
     "build:pdf": "marp main.md --theme themes/swipytics.css --pdf --allow-local-files -o dist/swipytics-slide.pdf",
     "build": "pnpm build:html && pnpm build:pdf",
     "render:slide": "node scripts/render-slide.cjs",
-    "dev": "marp -s . --theme themes/swipytics.css --allow-local-files",
+    "dev": "CHOKIDAR_USEPOLLING=true marp -s . --theme themes/swipytics.css --allow-local-files",
     "preview": "marp main.md --theme themes/swipytics.css --html --allow-local-files -w -o dist/index.html",
-    "server": "marp -s . --theme themes/swipytics.css --allow-local-files"
+    "server": "CHOKIDAR_USEPOLLING=true marp -s . --theme themes/swipytics.css --allow-local-files"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^4.2.3"
+    "@marp-team/marp-cli": "^4.2.3",
+    "@observablehq/plot": "^0.6.17",
+    "jsdom": "^30.1.3",
+    "qrcode": "^1.5.4",
+    "vega": "^6.4.0",
+    "vega-lite": "^6.5.0"
   }
 }

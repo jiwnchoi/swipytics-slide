@@ -21,7 +21,7 @@ pnpm preview      # rebuild dist/index.html on change
 pnpm server       # same server as pnpm dev
 ```
 
-`--allow-local-files` is required because the deck references local figures in `assets/`.
+`--allow-local-files` is required because the deck references local figures in `assets/`. The server scripts use Chokidar polling to avoid `EMFILE: too many open files, watch` when watching the project directory. Polling may use more CPU than native file watching.
 
 ## Slide Structure
 
